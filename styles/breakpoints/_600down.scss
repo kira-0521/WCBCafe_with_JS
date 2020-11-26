@@ -1,0 +1,116 @@
+/********************************
+
+       600px以下のモニタで適用
+
+********************************/
+
+    // HOME
+    .page-header {
+        & > nav {
+            display: none;
+        }
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home-content {
+        margin-top: 20%;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    // HEADER
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+
+        & li {
+            margin: 0 20px;
+        }
+    }
+
+    // NEWS
+    .news-contents {
+        flex-direction: column;
+
+        & article,
+        & aside {
+            width: 100%;
+        }
+
+        & aside {
+            margin-top: 60px;
+        }
+
+        // ↓レスポンシブが適用されない。
+        // ベースのスタイルを消すと適用される。
+        & .post-info {
+            margin-bottom: 30px;
+
+            & .post-title {
+                font-size: 1.375rem;
+            }
+
+            & .post-date {
+                width: 70px;
+                height: 70px;
+                font-size: 1rem;
+
+                & span {
+                    font-size: 0.875rem;
+                    padding-top: 2px;
+                }
+            }
+
+            & .post-cat {
+                font-size: 0.875rem;
+                margin-top: 10px;
+            }
+
+            & .post-title,
+            & .post-cat {
+                margin-left: 80px;
+            }
+        }
+    }
+
+    #news {
+        & .page-title {
+            margin-top: 30px;
+        }
+    }
+
+    // MENU
+    .menu-content {
+        margin-top: 20%;
+    }
+
+    // 大きい画像の調整
+    .big-box {
+        grid-column: auto !important;
+        grid-row: auto !important;
+
+        & img {
+            height: 100% !important;
+        }
+    }
+
+    // CONTACT
+    #contact {
+        & .page-title {
+            margin-top: 40px;
+        }
+
+        // フォーム
+        & input[type="text"],
+        & input[type="email"],
+        & textarea {
+            max-width: 100%;
+        }
+    }
+
+
+
