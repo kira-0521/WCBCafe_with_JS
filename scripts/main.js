@@ -23,6 +23,7 @@ class MobileMenu {
         this._addEvent();
     }
 
+    // コンストラクター内でも可能だが特定の処理を行う場合、プライベートメソッドに切り替える方が良い。
     _getEventType() {
         return window.ontouchstart ? 'touchstart' : 'click';
     }
@@ -31,6 +32,7 @@ class MobileMenu {
         this.DOM.home.classList.toggle('menu-open');
     }
 
+    // ゲットしてきたイベントタイプを引き金にトグルを発動させる。
     _addEvent() {
         this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
         this.DOM.btn.addEventListener(this.eventType, this._toggle.bind(this));
