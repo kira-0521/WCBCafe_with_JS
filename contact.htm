@@ -13,100 +13,113 @@
 </head>
 
 <body>
+    <div id="global-home">
+        <div id="contact" class="big-bg">
 
-    <div id="contact" class="big-bg">
-        <header class="page-header wrapper">
-            <h1><a href="index.html"><img class="logo" src="images/logo.svg" alt="WCBカフェ ホーム"></a></h1>
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+            <div class="mobile-menu__cover"></div>
+            
+            <header class="page-header wrapper">
+                <h1><a href="index.html"><img class="logo" src="images/logo.svg" alt="WCBカフェ ホーム"></a></h1>
 
-        <!-- お問い合わせフォーム -->
-        <div class="wrapper">
+                <button class="mobile-menu__btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-            <h2 class="page-title">Contact</h2>
-            <form action="#">
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-                <div>
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" name="your-name">
-                </div>
+            <!-- お問い合わせフォーム -->
+            <div class="wrapper">
 
-                <div>
-                    <label for="email">メールアドレス</label>
-                    <input type="email" id="email" name="your-email">
-                </div>
+                <h2 class="page-title">Contact</h2>
+                <form action="#">
 
-                <div>
-                    <label for="message">メッセージ</label>
-                    <textarea name="your-message" id="message"></textarea>
-                </div>
+                    <div>
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="your-name">
+                    </div>
 
-                <!-- 送信ボタン -->
-                <input type="submit" class="button" value="送信">
+                    <div>
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="your-email">
+                    </div>
 
-            </form>
+                    <div>
+                        <label for="message">メッセージ</label>
+                        <textarea name="your-message" id="message"></textarea>
+                    </div>
+
+                    <!-- 送信ボタン -->
+                    <input type="submit" class="button" value="送信">
+
+                </form>
+            </div>
         </div>
+
+        <section id="location">
+            <div class="wrapper">
+
+                <!-- 文字部分 -->
+                <div class="location-info">
+                    <h3 class="sub-title">カフェ　東駅前店</h3>
+                    <p>
+                        住所： 東京都〇〇区<br>
+                        〇〇〇〇〇〇〇 000-22-1<br>
+                        〇〇〇〇<br>
+                        電話： 03-1111-1111<br>
+                        営業時間： 10:00〜20:00<br>
+                        休日：水曜
+                    </p>
+            </div> <!-- .location-info -->
+
+            <div class="location-map">
+                <!-- グーグルマップ -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53314.56554708257!2d129.51656817910157!3d33.3668796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356af19705b36be5%3A0x3d0d0dfc53945270!2z77yI5pyJ77yJ44K_44OK44Kr44Ok6Iqx5bqXIOW5s-aIuOW6lw!5e0!3m2!1sja!2sjp!4v1603890299038!5m2!1sja!2sjp" 
+                        width="800" height="400" frameborder="0" style="border:0;" 
+                        allowfullscreen="" aria-hidden="false" tabindex="0">
+                </iframe>
+            </div> <!-- .location-map -->
+
+            </div> <!-- .wrapper -->
+        </section> <!-- #location -->
+
+        <!-- SNS -->
+        <section id="sns">
+            <div class="wrapper">
+
+                <div class="sns-box">
+                    <h3 class="sub-title">Facebook</h3>
+                    Facebookプラグイン
+                </div>
+
+                <div class="sns-box">
+                    <h3 class="sub-title">Twitter</h3>
+                    Twitterプラグイン
+                </div>
+
+                <div class="sns-box">
+                    <h3 class="sub-title">Youtube</h3>
+                    Youtube動画
+                </div>
+                
+            </div>
+        </section> <!-- #sns -->
+
+        <!-- フッター -->
+        <footer>
+            <div class="wrapper">
+                <p><small>&copy; 2020 Manabox</small></p>
+            </div>
+        </footer>
     </div>
 
-    <section id="location">
-        <div class="wrapper">
-
-            <!-- 文字部分 -->
-            <div class="location-info">
-                <h3 class="sub-title">カフェ　東駅前店</h3>
-                <p>
-                    住所： 東京都〇〇区<br>
-                    〇〇〇〇〇〇〇 000-22-1<br>
-                    〇〇〇〇<br>
-                    電話： 03-1111-1111<br>
-                    営業時間： 10:00〜20:00<br>
-                    休日：水曜
-                </p>
-           </div> <!-- .location-info -->
-
-           <div class="location-map">
-            <!-- グーグルマップ -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53314.56554708257!2d129.51656817910157!3d33.3668796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356af19705b36be5%3A0x3d0d0dfc53945270!2z77yI5pyJ77yJ44K_44OK44Kr44Ok6Iqx5bqXIOW5s-aIuOW6lw!5e0!3m2!1sja!2sjp!4v1603890299038!5m2!1sja!2sjp" 
-                    width="800" height="400" frameborder="0" style="border:0;" 
-                    allowfullscreen="" aria-hidden="false" tabindex="0">
-            </iframe>
-           </div> <!-- .location-map -->
-
-        </div> <!-- .wrapper -->
-    </section> <!-- #location -->
-
-    <!-- SNS -->
-    <section id="sns">
-        <div class="wrapper">
-
-            <div class="sns-box">
-                <h3 class="sub-title">Facebook</h3>
-                Facebookプラグイン
-            </div>
-
-            <div class="sns-box">
-                <h3 class="sub-title">Twitter</h3>
-                Twitterプラグイン
-            </div>
-
-            <div class="sns-box">
-                <h3 class="sub-title">Youtube</h3>
-                Youtube動画
-            </div>
-            
-        </div>
-    </section> <!-- #sns -->
-
-    <!-- フッター -->
-    <footer>
-        <div class="wrapper">
-            <p><small>&copy; 2020 Manabox</small></p>
-        </div>
-    </footer>
+    <script src="scripts/main.js"></script>
 </body>
