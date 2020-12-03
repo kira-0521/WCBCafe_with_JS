@@ -10,6 +10,7 @@ $cMenuOpen: $cBlack;
     & .logo {
         padding: 0 40px;
         font-size: 38px;
+        visibility: hidden;
     }
 
     &__btn {
@@ -66,7 +67,10 @@ $cMenuOpen: $cBlack;
 }
 
 .menu-open {
-    & #home {
+    & #home,
+    & #contact,
+    & #menu,
+    & #news {
         transform: translate(-300px, 60px);
         box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
     }
@@ -74,6 +78,9 @@ $cMenuOpen: $cBlack;
     & .mobile-menu {
         &__cover {
             opacity: 1;
+            visibility: visible;
+        }
+        &__logo {
             visibility: visible;
         }
         &__item {

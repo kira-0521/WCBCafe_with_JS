@@ -218,6 +218,7 @@ img {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  padding-top: 100px;
 }
 
 #home {
@@ -235,18 +236,31 @@ img {
   text-transform: none;
 }
 
-.logo {
-  width: 210px;
-  margin-top: 14px;
-}
-
 .page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.page-header.triggered {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 210px;
+  margin-top: 14px;
 }
 
 .wrapper {
@@ -325,9 +339,14 @@ footer p {
 }
 
 #news {
-  background-image: url(../images/news-bg.jpg);
   height: 270px;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
+  transition: -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s, -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
 }
 
 #news .page-title {
@@ -341,30 +360,35 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 50px;
+  margin: 0 0 50px;
+  padding-top: 100px;
 }
 
-.news-contents article {
+.news-contents .left {
   width: 74%;
 }
 
-.news-contents article .post-info {
+.news-contents .left .page-title {
+  margin: 15px 0;
+}
+
+.news-contents .left .post-info {
   position: relative;
   padding-top: 4px;
   margin-bottom: 40px;
 }
 
-.news-contents article .post-info .post-title {
+.news-contents .left .post-info .post-title {
   font-family: "Yu Mincho", "YuMincho", serif;
   font-size: 2rem;
   font-weight: normal;
 }
 
-.news-contents article .post-info .post-title, .news-contents article .post-info .post-cat {
+.news-contents .left .post-info .post-title, .news-contents .left .post-info .post-cat {
   margin-left: 120px;
 }
 
-.news-contents article .post-info .post-date {
+.news-contents .left .post-info .post-date {
   background: #0bd;
   border-radius: 50%;
   color: #fff;
@@ -377,7 +401,7 @@ footer p {
   padding-top: 10px;
 }
 
-.news-contents article .post-info .post-date span {
+.news-contents .left .post-info .post-date span {
   font-size: 1rem;
   border-top: rgba(255, 255, 255, 0.5) solid;
   padding-top: 6px;
@@ -386,61 +410,70 @@ footer p {
   margin: 0 auto;
 }
 
-.news-contents article img {
+.news-contents .left img {
   margin-bottom: 20px;
 }
 
-.news-contents article p {
+.news-contents .left p {
   margin-bottom: 1rem;
 }
 
-.news-contents aside {
+.news-contents .right {
   width: 22%;
 }
 
-.news-contents aside .sub-menu {
+.news-contents .right .sub-menu {
   margin-bottom: 60px;
   list-style: none;
 }
 
-.news-contents aside .sub-menu li {
+.news-contents .right .sub-menu li {
   border-bottom: 1px #ddd solid;
 }
 
-.news-contents aside .sub-menu a {
+.news-contents .right .sub-menu a {
   color: #432;
   padding: 10px;
   display: block;
 }
 
-.news-contents aside .sub-menu a:hover {
+.news-contents .right .sub-menu a:hover {
   color: #0bd;
 }
 
-.news-contents aside p {
+.news-contents .right p {
   padding: 12px 10px;
 }
 
 #menu {
-  background-image: url(../images/menu-bg.jpg);
-  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
+  transition: -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s, -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
 }
 
-#menu .menu-content {
+#content {
+  padding-top: 100px;
+}
+
+#content .menu-contents {
   max-width: 560px;
-  margin-top: 10%;
 }
 
-#menu .menu-content .page-title {
+#content .menu-contents .page-title {
   text-align: center;
 }
 
-#menu .menu-content p {
+#content .menu-contents p {
   font-size: 1.125rem;
   margin: 10px 0 0;
 }
 
 .grid {
+  position: relative;
+  z-index: 10;
   display: -ms-grid;
   display: grid;
   gap: 26px;
@@ -467,8 +500,18 @@ footer p {
 }
 
 #contact {
+  position: relative;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
+  transition: -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s, -webkit-transform 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.form {
+  padding-top: 100px;
+  background-origin: content-box;
   background-image: url(../images/contact-bg.jpg);
-  min-height: 100vh;
 }
 
 form div {
@@ -570,6 +613,7 @@ iframe {
   .mobile-menu .logo {
     padding: 0 40px;
     font-size: 38px;
+    visibility: hidden;
   }
   .mobile-menu__btn {
     background-color: unset;
@@ -630,7 +674,10 @@ iframe {
     color: black;
     text-decoration: none !important;
   }
-  .menu-open #home {
+  .menu-open #home,
+  .menu-open #contact,
+  .menu-open #menu,
+  .menu-open #news {
     -webkit-transform: translate(-300px, 60px);
             transform: translate(-300px, 60px);
     -webkit-box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
@@ -638,6 +685,9 @@ iframe {
   }
   .menu-open .mobile-menu__cover {
     opacity: 1;
+    visibility: visible;
+  }
+  .menu-open .mobile-menu__logo {
     visibility: visible;
   }
   .menu-open .mobile-menu__item {
@@ -721,11 +771,11 @@ iframe {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .news-contents article,
-  .news-contents aside {
+  .news-contents .left,
+  .news-contents .right {
     width: 100%;
   }
-  .news-contents aside {
+  .news-contents .right {
     margin-top: 60px;
   }
   .news-contents .post-info {
@@ -751,21 +801,12 @@ iframe {
   .news-contents .post-info .post-cat {
     margin-left: 80px;
   }
-  #news .page-title {
-    margin-top: 30px;
-  }
-  .menu-content {
-    margin-top: 20%;
-  }
   .big-box {
     grid-column: auto !important;
     grid-row: auto !important;
   }
   .big-box img {
     height: 100% !important;
-  }
-  #contact .page-title {
-    margin-top: 40px;
   }
   #contact input[type="text"],
   #contact input[type="email"],

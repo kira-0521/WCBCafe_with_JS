@@ -36,12 +36,12 @@
     .news-contents {
         flex-direction: column;
 
-        & article,
-        & aside {
+        & .left,
+        & .right {
             width: 100%;
         }
 
-        & aside {
+        & .right {
             margin-top: 60px;
         }
 
@@ -77,16 +77,7 @@
         }
     }
 
-    #news {
-        & .page-title {
-            margin-top: 30px;
-        }
-    }
 
-    // MENU
-    .menu-content {
-        margin-top: 20%;
-    }
 
     // 大きい画像の調整
     .big-box {
@@ -100,9 +91,6 @@
 
     // CONTACT
     #contact {
-        & .page-title {
-            margin-top: 40px;
-        }
 
         // フォーム
         & input[type="text"],
