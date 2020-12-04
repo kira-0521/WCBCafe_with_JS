@@ -1,8 +1,9 @@
 .btn {
   position: relative;
   display: inline-block;
-  background-color: $cWhite;
-  border: 1px solid $cBlack;
+  background-color: $cBtn;
+  border: 1px solid $cBtn;
+  border-radius: 4px;
   font-weight: 600;
   padding: 10px 40px;
   margin: 10px auto;
@@ -30,9 +31,9 @@
   }
 
   &.letter-spacing:hover {
-    background-color: $cBlack;
+    background-color: $cBtnHover;
     letter-spacing: 3px;
-    color: $cWhite;
+    border: $cBtn;
   }
 
   &.shadow {

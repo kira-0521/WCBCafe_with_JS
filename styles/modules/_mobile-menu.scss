@@ -6,10 +6,11 @@ $cMenuOpen: $cBlack;
     right: 0;
     top: 60px;
     width: 300px;
+    display: block;
 
-    & .logo {
-        padding: 0 40px;
-        font-size: 38px;
+    &__logo {
+        width: 250px;
+        padding: 0 35px;
         visibility: hidden;
     }
 
@@ -81,7 +82,7 @@ $cMenuOpen: $cBlack;
             visibility: visible;
         }
         &__logo {
-            visibility: visible;
+            visibility: visible !important;
         }
         &__item {
             transform: none;

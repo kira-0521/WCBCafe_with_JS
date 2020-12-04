@@ -1,5 +1,5 @@
 const target = document.querySelector('.nav-trigger');
-const header = document.querySelector('.page-header');
+const header = document.querySelector('.header');
 
 
 const cb = (entries) => {

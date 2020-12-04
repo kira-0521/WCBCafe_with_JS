@@ -15,6 +15,16 @@ a {
 img {
     max-width: 100%;
 }
+ul {
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.content-width {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1100px;
+  }
 
 // 背景画像
 .big-bg {
@@ -41,7 +51,7 @@ img {
 }
 
 // HEADER
-.page-header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -49,8 +59,15 @@ img {
     height: $navHeight;
     background-color: transparent;
     z-index: 100;
-    display: flex;
-    justify-content: space-between;
+    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $navHeight;
+        @extend .content-width;
+    }
+    
 
     &.triggered {
         background-color: rgba(255, 255, 255, 0.9);
@@ -58,8 +75,7 @@ img {
     }
 }
 .logo {
-    width: 210px;
-    margin-top: 14px;
+    width: 180px;
 }
 .wrapper {
     max-width: 1100px;
@@ -84,7 +100,6 @@ footer {
     display: flex;
     font-size: 1.25rem;
     text-transform: uppercase;
-    margin-top: 34px;
     list-style: none;
 
     & li {
@@ -142,7 +157,6 @@ footer {
 
 // NEWS
 #news {
-    height: 270px;
     margin-bottom: 40px;
     position: relative;
     z-index: 10;
@@ -248,7 +262,6 @@ footer {
     position: relative;
     z-index: 10;
     transition: transform 0.5s, box-shadow 0.5s;
-
 }
 
 #content{
@@ -256,6 +269,7 @@ footer {
 
     & .menu-contents {
         max-width: 560px;
+        margin-bottom: 70px;
     
         & .page-title {
             text-align: center;
@@ -306,50 +320,60 @@ footer {
     // つけないとpaddingを無視して配置されてしまう。
     background-origin: content-box;
     background-image: url(../images/contact-bg.jpg);
-}
+    
+    & form {
 
-// フォーム
-form {
+        & div {
+            margin-bottom: 14px;
+    
+            & label {
+                font-size: 1.125rem;
+                margin-bottom: 10px;
+                display: block;
+            }
+    
+            & input[type="text"],
+            & input[type="email"],
+            & textarea {
+                background: rgba(255, 255, 255, 0.5);
+                border: 1px $cWhite solid;
+                border-radius: 5px;
+                padding: 10px;
+                font-size: 1rem;
+            }
+            
+            & input[type="text"],
+            & input[type="email"] {
+                width: 100%;
+                max-width: 240px;
+            }
+    
+            & textarea {
+                width: 100%;
+                max-width: 480px;
+                height: 6rem;
+            }
+    
+            // input[type="submit"] {
+            //     border: none;
+            //     cursor: pointer;
+            //     line-height: 1;
+            // }
 
+            & .btn {
+                &.letter-spacing {
+                    background-color: $cBtn !important;
 
-    & div {
-        margin-bottom: 14px;
-
-        & label {
-            font-size: 1.125rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        & input[type="text"],
-        & input[type="email"],
-        & textarea {
-            background: rgba(255, 255, 255, 0.5);
-            border: 1px $cWhite solid;
-            border-radius: 5px;
-            padding: 10px;
-            font-size: 1rem;
-        }
-        
-        & input[type="text"],
-        & input[type="email"] {
-            width: 100%;
-            max-width: 240px;
-        }
-
-        & textarea {
-            width: 100%;
-            max-width: 480px;
-            height: 6rem;
-        }
-
-        input[type="submit"] {
-            border: none;
-            cursor: pointer;
-            line-height: 1;
+                    &:hover {
+                        background-color: $cBtnHover !important;
+                    }
+                }
+            }
         }
     }
 }
+
+// フォーム
 
 // 店舗情報・地図
 #location {
@@ -394,6 +418,10 @@ iframe {
 
 .sns-box {
     width: 30%;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 
